@@ -1,0 +1,15 @@
+# Example custom schema for RabbitLink
+# This schema defines the structure of each JSON object in the output array.
+# Placeholders like {title}, {url}, {content}, {sections}, {images}, {infobox_data}
+# will be replaced with data extracted from the Wikipedia page.
+
+article_name: "{title}" # Renames 'title' to 'article_name'
+source_link: "{url}"
+full_text: "{content}"
+# main_sections: "{sections}" # Uncomment to include sections
+# media_references: "{images}" # Uncomment to include images (requires --keep-images flag)
+# structured_details: "{infobox_data}" # Uncomment to include infobox (requires --keep-infobox flag)
+
+# You can also add static values:
+source_database: "Wikipedia"
+processed_by: "RabbitLink"

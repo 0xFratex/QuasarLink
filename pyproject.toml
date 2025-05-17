@@ -1,0 +1,42 @@
+[tool.poetry]
+name = "rabbitlink"
+version = "0.2.0" # Updated version
+description = "A Python-based CLI tool for harvesting, cleaning, and exporting Wikipedia articles in JSON."
+authors = ["Your Name <you@example.com>"] # UPDATE THIS
+license = "MIT"
+readme = "README.md"
+packages = [{include = "rabbitlink"}]
+homepage = "https://github.com/your-org/rabbitlink" # UPDATE THIS
+repository = "https://github.com/your-org/rabbitlink" # UPDATE THIS
+
+[tool.poetry.dependencies]
+python = "^3.8"
+requests = "^2.31.0"
+beautifulsoup4 = "^4.12.3"
+typer = {extras = ["all"], version = "^0.9.0"} # "all" includes rich
+tqdm = "^4.66.1" # Still listed, though cli.py now uses Rich Progress
+PyYAML = "^6.0.1"
+# rich is included by typer[all], but can be listed explicitly if preferred
+# rich = "^13.0.0" 
+
+[tool.poetry.group.dev.dependencies] # Updated group syntax
+pytest = "^7.4.2"
+flake8 = "^6.1.0"
+black = "^23.11.0" # Or latest stable
+mypy = "^1.7.0" # Optional: for static type checking
+requests-mock = "^1.11.0" # For testing fetcher
+
+[tool.poetry.scripts]
+rabbitlink = "rabbitlink.cli:app"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 88
+target-version = ['py38', 'py39', 'py310', 'py311', 'py312']
+
+[tool.flake8]
+max-line-length = 88
+extend-ignore = "E203, W503" # E203: whitespace before ':', W503: line break before binary operator (black handles)
