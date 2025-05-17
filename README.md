@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # QuasarLink 🔗✨
 
 **QuasarLink** is a powerful command-line tool designed to efficiently harvest, clean, and export Wikipedia articles into a structured JSON format, optimized for use with Large Language Models (LLMs) and other data analysis tasks. It provides robust content extraction, customizable output schemas, and concurrent processing capabilities.
@@ -243,3 +244,6 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 ## Disclaimer
 
 QuasarLink is a tool for accessing publicly available data from Wikipedia. Please be mindful of Wikipedia's Terms of Use and API usage guidelines. Use this tool responsibly and avoid making an excessive number of requests in a short period. The default request delay helps with this, but be considerate.
+=======
+# QuasarLink
+>>>>>>> fb99b1b49c7fb0b475c00430e446c195a5b532e8
